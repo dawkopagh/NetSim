@@ -1,0 +1,38 @@
+@startuml
+mainframe Storage
+class Package {
+    + Package()
+    + Package(ElementID)
+    + Package(Package&&)
+    + operator=(Package&&) : Package&
+    + get_id() : ElementID {query}
+    + ~Package()
+}
+
+interface IPackageStockpile <<interface>> {
+    + {abstract} push(Package&&) : void{query}
+    + {abstract} empty() : bool {query}
+    + {abstract} size() : size_type {query}
+    + {abstract} /iteratory/
+    + {abstract} ~IPackageStockpile()
+}
+
+interface IPackageQueue <<interface>> {
+    + {abstract} pop() : Package
+    + {abstract} get_queue_type() : PackageQueueType{query}
+}
+
+class PackageQueue {
+    + {method} PackageQueue(PackageQueueType)
+}
+
+enum PackageQueueType <<enumeration>> {
+     FIFO
+     LIFO
+}
+
+
+class ElementId << (T,orchid) primitive>>{
+     ElementID
+}
+@enduml

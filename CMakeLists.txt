@@ -15,7 +15,7 @@ set(SOURCE_FILES
         src/reports.cpp
         src/simulation.cpp
         src/types.cpp
-        )
+        include/storage_types.hpp src/storage_types.cpp)
 
 add_executable(netsim ${SOURCE_FILES} main.cpp)
 
