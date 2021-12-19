@@ -7,6 +7,7 @@ set(This NetSim__tests)
 
 set(Sources
         main_gtest.cpp
+        test_package.cpp
         )
 
 add_library(import_setup

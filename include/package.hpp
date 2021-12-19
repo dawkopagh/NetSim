@@ -13,13 +13,21 @@
 
 class Package{
     public:
-        Package() = default;
-        Package(ElementID elementId) : elementID_(elementId) {}
-        Package(Package&) = default;
-        Package& operator= (const Package&) = default;
+        Package();
+        Package(ElementID elementId);
+        Package(const Package&& other) : elementID_(other.get_id()) {}
+        Package(const Package& other) : elementID_(other.get_id()) {}
+
+
+        Package& operator= (Package&& other);
+
         ElementID get_id() const {return elementID_; };
+
         ~Package() = default;
+
     private:
+    inline static std::list<ElementID> assigned_ids_ = {0};
+    inline static std::list<ElementID> freed_ids_ = {};
     ElementID elementID_;
 };
 
