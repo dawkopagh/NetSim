@@ -2,7 +2,29 @@
 // Created by dkope on 15.12.2021.
 //
 
-#ifndef NETSIM_PACKAGE_HPP
-#define NETSIM_PACKAGE_HPP
+#ifndef NET_SIMULATION_PACKAGE_HPP
+#define NET_SIMULATION_PACKAGE_HPP
+#include "types.hpp"
 
-#endif //NETSIM_PACKAGE_HPP
+#include <set>
+
+class Package{
+public:
+    Package();
+    Package(ElementID id) : _id(id) {};
+    Package(Package&& package): _id(std::move(package)._id) {};
+
+    Package& operator=(Package&&) = default;
+
+    ElementID get_id() const { return _id; }
+
+    ~Package();
+
+private:
+    ElementID _id;
+    static std::set<ElementID> assigned_IDs;
+    static std::set<ElementID> freed_IDs;
+};
+
+#endif //NET_SIMULATION_PACKAGE_HPP
+
