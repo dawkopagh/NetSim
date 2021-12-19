@@ -19,12 +19,12 @@ enum class PackageQueueType{
 class IPackageStockpile
 {
 public:
-    using const_iterator = std::list<Package>::const_iterator;
-    virtual void push(Package package) = 0;
+    using const_iterator = std::list<Package>::const_iterator; //alias
+    virtual void push(Package package) = 0; //methods of virtual
     virtual bool empty() const = 0;
     virtual std::size_t size() const = 0;
-    virtual ~IPackageStockpile() = default;
-    virtual const_iterator cbegin() const = 0;
+    virtual ~IPackageStockpile() = default; //virtual desctructor
+    virtual const_iterator cbegin() const = 0; //ready-only
     virtual const_iterator cend() const = 0;
     virtual const_iterator begin() const = 0;
     virtual const_iterator end() const = 0;
