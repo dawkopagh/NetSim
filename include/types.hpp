@@ -1,5 +1,5 @@
 //
-// Created by dkope on 15.12.2021.
+// Created by dkope on 19.12.2021.
 //
 #ifndef NET_SIMULATION_TYPES_HPP
 #define NET_SIMULATION_TYPES_HPP
@@ -10,6 +10,4 @@
 typedef int ElementID;
 
 
-#endif //NET_SIMULATION_TYPES_HPP
-
-//aliasy
+#endif

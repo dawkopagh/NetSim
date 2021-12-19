@@ -11,9 +11,7 @@
 #include <iostream>
 
 
-/*klasy IPackageStockpile, IPackageQueue, PackageQueue
-typ wyliczeniowy PackageQueueType
- */
+
 enum class PackageQueueType{
     FIFO, LIFO
 };
@@ -59,4 +57,4 @@ private:
     PackageQueueType type_;
 };
 
-#endif //NET_SIMULATION_STORAGE_TYPES_HPP
+#endif

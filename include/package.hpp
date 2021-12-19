@@ -1,5 +1,5 @@
 //
-// Created by dkope on 15.12.2021.
+// Created by dkope on 19.12.2021.
 //
 
 #ifndef NET_SIMULATION_PACKAGE_HPP
@@ -26,5 +26,5 @@ private:
     static std::set<ElementID> freed_IDs;
 };
 
-#endif //NET_SIMULATION_PACKAGE_HPP
+#endif
 
