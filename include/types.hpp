@@ -6,5 +6,4 @@
 #define NETSIM_TYPES_HPP
 
 using ElementID = int;
-
 #endif //NETSIM_TYPES_HPP

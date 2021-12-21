@@ -10,6 +10,7 @@
 #include <list>
 
 #include "package.hpp"
+#include "types.hpp"
 
 enum PackageQueueType {
     FIFO,

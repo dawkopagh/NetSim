@@ -8,6 +8,7 @@
 #include <vector>
 #include <ostream>
 #include <list>
+#include <set>
 
 #include "types.hpp"
 
@@ -23,11 +24,11 @@ class Package{
 
         ElementID get_id() const {return elementID_; };
 
-        ~Package() = default;
+        ~Package();
 
     private:
-    inline static std::list<ElementID> assigned_ids_ = {0};
-    inline static std::list<ElementID> freed_ids_ = {};
+    inline static std::set<ElementID> assignedIDs_ = {0};
+    inline static std::set<ElementID> freedIDs_= {};
     ElementID elementID_;
 };
 
