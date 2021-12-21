@@ -22,7 +22,7 @@ public:
     using const_iterator = std::list<Package>::const_iterator; //alias
     virtual void push(Package package) = 0; //methods of virtual
     virtual bool empty() const = 0;
-    virtual std::size_t size() const = 0;
+    virtual std::size_type size() const = 0;
     virtual ~IPackageStockpile() = default; //virtual desctructor
     virtual const_iterator cbegin() const = 0; //ready-only
     virtual const_iterator cend() const = 0;
