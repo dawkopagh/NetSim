@@ -1,5 +1,5 @@
 //
-// Created by dkope on 19.12.2021.
+// Created by Wiktor on 19.12.2021.
 //
 
 #ifndef NET_SIMULATION_PACKAGE_HPP
