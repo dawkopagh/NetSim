@@ -1,8 +1,10 @@
-//
-// Created by dkope on 15.12.2021.
-//
+#ifndef NET_SIMULATION_SIMULATION_HPP
+#define NET_SIMULATION_SIMULATION_HPP
 
-#ifndef NETSIM_SIMULATION_HPP
-#define NETSIM_SIMULATION_HPP
+#include "factory.hpp"
+#include "types.hpp"
 
-#endif //NETSIM_SIMULATION_HPP
+void simulate(Factory& f, TimeOffset d, std::function<void (Factory&, Time)> rf);
+
+
+#endif

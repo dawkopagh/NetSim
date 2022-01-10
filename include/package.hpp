@@ -1,35 +1,24 @@
-//
-// Created by dkope on 15.12.2021.
-//
+#ifndef NET_SIMULATION_PACKAGE_HPP
+#define NET_SIMULATION_PACKAGE_HPP
 
-#ifndef NETSIM_PACKAGE_HPP
-#define NETSIM_PACKAGE_HPP
-
-#include <vector>
-#include <ostream>
-#include <list>
 #include <set>
-
-#include "types.hpp"
+#include <types.hpp>
 
 class Package{
-    public:
-        Package();
-        Package(ElementID elementId);
-        Package(const Package&& other) : elementID_(other.get_id()) {}
-        Package(const Package& other) : elementID_(other.get_id()) {}
+private:
+    inline static std::set<ElementID> assigned_IDs;
+    inline static std::set<ElementID> freed_IDs;
+    ElementID id_;
+public:
+    Package();
+    Package(ElementID id);
+    Package(Package&&)=default;
+    Package& operator=(Package&&)=default;
+    ~Package();
 
+    ElementID get_id() const {return id_;};
 
-        Package& operator= (Package&& other);
-
-        ElementID get_id() const {return elementID_; };
-
-        ~Package();
-
-    private:
-    inline static std::set<ElementID> assignedIDs_ = {0};
-    inline static std::set<ElementID> freedIDs_= {};
-    ElementID elementID_;
 };
 
-#endif //NETSIM_PACKAGE_HPP
+
+#endif

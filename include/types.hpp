@@ -1,9 +1,10 @@
-//
-// Created by dkope on 15.12.2021.
-//
-
-#ifndef NETSIM_TYPES_HPP
-#define NETSIM_TYPES_HPP
+#ifndef NET_SIMULATION_TYPES_HPP
+#define NET_SIMULATION_TYPES_HPP
+#include <functional>
 
 using ElementID = int;
-#endif //NETSIM_TYPES_HPP
+using Time = int;
+using TimeOffset = int;
+using ProbabilityGenerator = std::function<double()>;
+
+#endif
